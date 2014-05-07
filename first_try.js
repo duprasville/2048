@@ -39,3 +39,29 @@ var drawGrid = function (aGrid) {
 };
 
 drawGrid(anotherGrid);
+
+fill(255, 0, 0);
+textSize(50);
+var array = [0, 2, 2, 64];
+var printArray = function (array) {
+    var arrayNum = 0;
+    var pos = 5;
+    while(arrayNum <= 3) {
+        text(array[arrayNum], pos, 50);
+        arrayNum ++;
+        pos += 100;
+    }
+};
+var addArray = function (array) {
+    var added = [];
+
+    return(array);
+};
+
+var addedArray = addArray(array);
+
+printArray(addedArray);
+/**if (keyCode === LEFT) {
+    
+}
+**/
