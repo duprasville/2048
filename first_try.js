@@ -86,3 +86,43 @@ printArray(addedArray);
     
 }
 **/
+var Tile = function(num) {
+    this.x = 0;
+    this.num = num;
+    this.y = 0;
+    this.size = 90;
+    this.margin = 5;
+    this.textSize = 75;
+    this.paint = function() {
+        background(255, 255, 255);
+        if (keyCode === RIGHT) {
+            this.x = 305;
+        }
+        if ( keyCode === LEFT) {
+            this.x = 5;
+        }
+        if (keyCode === UP) {
+            this.y = 5;
+        }
+        if ( keyCode === DOWN) {
+            this.y = 305;
+        }
+    
+        fill(0, 0, 0);
+        textSize(this.textSize);
+        text(this.num, this.x + 20, this.y + 80);
+        noFill();
+        rect (this.x, this.y, 90, 90);
+    };
+    var setNum = function (num) {
+        this.num = num;
+    };
+    
+};
+
+var myTile = new Tile(2);
+//myTile.setNum(2048);
+var draw = function() {
+    myTile.paint();
+};
+
