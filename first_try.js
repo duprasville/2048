@@ -37,6 +37,27 @@ var drawGrid = function (aGrid) {
     gridRow ++;
     }  
 };
+var draw = function() {
+    var x = NaN;
+    var y = NaN;
+    if (keyCode === RIGHT) {
+        x = 300;
+        y = 5;
+    }
+    if ( keyCode === LEFT) {
+        x = 5;
+        y = 5;
+    }
+    if (keyCode === UP) {
+        y = 5;
+        x = 300;
+    }
+    if ( keyCode === DOWN) {
+        y = 300;
+        x = 5;
+    }
+    rect (x, y, 90, 90);
+};
 
 drawGrid(anotherGrid);
 
